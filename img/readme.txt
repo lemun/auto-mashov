@@ -1,0 +1,1 @@
+in this folder the 'proof.png' is saved and then deleted right after it was uploaded to imgur so you will most of the time see here nothing.
