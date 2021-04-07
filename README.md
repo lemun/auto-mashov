@@ -1,5 +1,7 @@
 # Mashov Covid-19 Automated Filler (+ Discord Webhook Integration)
 A Python Application written with Python using Selenium and some other libs
+[IMG]![image](https://user-images.githubusercontent.com/30008308/113902211-52a1d600-97d8-11eb-8df2-0ed17b52ea27.png)
+[/IMG]
 ## Install
 Use [PIP](https://pip.pypa.io/en/stable/) to install the following packages that are needed to run this app properly:
 1. discord-webhook
