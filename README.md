@@ -7,6 +7,7 @@ Use [PIP](https://pip.pypa.io/en/stable/) to install the following packages that
 2. selenium
 3. colorama
 4. pyimgur
+5. yagmail
 * If I forget something just download the package that is causing the error.
 ## Usage
 in ./config/main.json find this code:
@@ -27,6 +28,19 @@ Replace the following:
 * school: with your school id(semel)
 * client_id: with your imgur API client id(Google how to get it)
 * webhook_url: with your Discord Webhook URL
+
+in ./config/mail.json find this code:
+```
+{
+    "guser": "?",
+    "gpass": "?",
+    "tomail": "?"
+}
+```
+Replace the following:
+* guser: with your Gmail username(example: yourmail@gmail.com)
+* gpass: with your Gmail password
+* tomail: with the email address you want to send the emails to
 ## Explanation of process:
 1. Check if you set "headless_option" to 1 or 2 or something else(if 1: show browser. if 2: hide browser. if something else: print error and show browser)
 2. Go to the Mashov login page and login
