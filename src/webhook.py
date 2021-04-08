@@ -1,6 +1,8 @@
 import pyimgur
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import json
+import yagmail
+
 
 class Webhook:
 
@@ -15,12 +17,35 @@ class Webhook:
         version = config["version"]
         #CONFIG
 
+        #CONFIG for MAIL
+        config_path2 = (r"./config/mail.json")
+        with open(config_path2) as data2:
+            config2 = json.load(data2)
+        guser = config2["guser"]
+        gpass = config2["gpass"]
+        tomail = config2["tomail"]
+        subject = config2["subject"]
+        content = config2["content"]
+        
+        #CONFIG for MAIL
+
         PATH = './img/proof.png'
 
         im = pyimgur.Imgur(CLIENT_ID)
         uploaded_image = im.upload_image(PATH, title="Uploaded with PyImgur for Mashov Bot")
         image_link = uploaded_image.link
+        
+        content = content + image_link
+        try:
+            #initializing the server connection
+            yag = yagmail.SMTP(user=guser, password=gpass)
+            #sending the email
+            yag.send(to=tomail, subject=subject, contents=content)
+        except:
+            print("Error, email was not sent")
 
+
+        
         webhook = DiscordWebhook(url=webhook_url, username=webhook_user)
 
         info_myclass = '?'
