@@ -48,7 +48,8 @@ Replace the following:
 4. Take a screenshot
 5. Upload said screenshot to imgur
 6. Send a Discord webhook with said screenshot
-7. Delete said screenshot
-8. Finish
+7. Send you an email with said screenshot
+8. Delete said screenshot
+9. Finish
 ## Legal
 DISCLAIMER: This is not affliated, endorsed or certified by Mashov. This is an independent and unofficial project that is strictly for educational purposes only and not intended to cause any harm. I am not responsible for anyone who decided to download my app and use it against my will and Mashov's will. Use at your OWN risk ONLY.
